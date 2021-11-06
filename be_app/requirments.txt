@@ -1,6 +1,6 @@
 attrs==21.2.0
 click==8.0.3
-dataclasses==0.8
+dataclasses==0.6
 dnspython==2.1.0
 Flask==2.0.2
 importlib-metadata==4.8.1
