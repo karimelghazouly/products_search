@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 function App() {
   const [searchResults, setSearchResults] = useState([]);
   function searchProducts() {
-    fetch('http://localhost:5010/search_products?search_sentence=' + document.getElementById('searchTerm').value)
+    fetch('https://search-engine.onrender.com/search_products?search_sentence=' + document.getElementById('searchTerm').value)
     .then(response => response.json())
     .then(data => setSearchResults(data['data']))
   }
