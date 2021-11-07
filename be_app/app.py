@@ -21,7 +21,7 @@ def search_garments():
     matches_ids = search_index(search_sentence)
     matches = db['products'].find({'_id':{
       '$in': list(matches_ids)
-    }})
+    }}, {'product_title': 1, 'product_description': 1})
     
     matches_list = [json.dumps(match, default=str) for match in matches]
     return {'data': matches_list}
